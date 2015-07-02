@@ -482,7 +482,7 @@
 		E2EC00801B254489002AD63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = tom;
 				TargetAttributes = {
 					E2EC00871B254489002AD63A = {
@@ -561,6 +561,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -591,12 +592,12 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					../libs/libTurboJpeg/lib/osx/libturbojpeg.dylib,
 					"../libs/libusb/lib/osx/usb-1.0.0-superspeed.a",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 				SYMROOT = ../../openKinectv2/lib;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -647,11 +648,12 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					../libs/libTurboJpeg/lib/osx/libturbojpeg.dylib,
 					"../libs/libusb/lib/osx/usb-1.0.0-superspeed.a",
 				);
-				SDKROOT = macosx;
+				SDKROOT = macosx10.10;
 				SYMROOT = ../../openKinectv2/lib;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -662,6 +664,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -718,6 +721,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
