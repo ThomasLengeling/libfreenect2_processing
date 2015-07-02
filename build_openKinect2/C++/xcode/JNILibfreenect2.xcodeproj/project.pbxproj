@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2785DB01B334B23007E4654 /* turbojpeg.h in Headers */ = {isa = PBXBuildFile; fileRef = E2785DAC1B334B23007E4654 /* turbojpeg.h */; };
-		E2785DB11B334B23007E4654 /* libturbojpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2785DAF1B334B23007E4654 /* libturbojpeg.dylib */; };
+		E2785DB11B334B23007E4654 /* libturbojpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2785DAF1B334B23007E4654 /* libturbojpeg.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		E287FF431B295C08005F5D56 /* openKinectv2_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2EC00B31B254B5E002AD63A /* openKinectv2_Device.cpp */; };
 		E287FF441B295C18005F5D56 /* JNILibfreenect2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E287FDFF1B289501005F5D56 /* JNILibfreenect2.cpp */; };
 		E2BC4C9B1B2FCC4400E95658 /* resources.inc.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BC4C9A1B2FCC4400E95658 /* resources.inc.h */; };
@@ -453,7 +452,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2785DB01B334B23007E4654 /* turbojpeg.h in Headers */,
 				E2BC4C9B1B2FCC4400E95658 /* resources.inc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,20 +595,6 @@
 				OTHER_LDFLAGS = (
 					../libs/libTurboJpeg/lib/osx/libturbojpeg.dylib,
 					"../libs/libusb/lib/osx/usb-1.0.0-superspeed.a",
-					"-lopencv_calib3d",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_highgui",
-					"-lopencv_imgproc",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_photo",
-					"-lopencv_stitching",
-					"-lopencv_superres",
-					"-lopencv_ts",
-					"-lopencv_video",
-					"-lopencv_videostab",
 				);
 				SDKROOT = macosx;
 				SYMROOT = ../../openKinectv2/lib;
@@ -666,20 +650,6 @@
 				OTHER_LDFLAGS = (
 					../libs/libTurboJpeg/lib/osx/libturbojpeg.dylib,
 					"../libs/libusb/lib/osx/usb-1.0.0-superspeed.a",
-					"-lopencv_calib3d",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_highgui",
-					"-lopencv_imgproc",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_photo",
-					"-lopencv_stitching",
-					"-lopencv_superres",
-					"-lopencv_ts",
-					"-lopencv_video",
-					"-lopencv_videostab",
 				);
 				SDKROOT = macosx;
 				SYMROOT = ../../openKinectv2/lib;
@@ -692,6 +662,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -719,9 +691,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/lib,
 					../libs/libusb/lib/osx,
 					../libs/libTurboJpeg/lib/osx,
+					/usr/local/lib,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -746,6 +718,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -773,9 +747,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/local/lib,
 					../libs/libusb/lib/osx,
 					../libs/libTurboJpeg/lib/osx,
+					/usr/local/lib,
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",

@@ -39,7 +39,9 @@ along with KinectfV2.0 library for Processing.  If not, see
 public class Device {
 	
     static {
-    	System.loadLibrary("turbojpeg");
+    	String path  =  System.getProperty("user.dir");
+    	System.out.println(path );
+    	System.load(path+"/"+"libturbojpeg.dylib");
         System.loadLibrary("JNILibfreenect2");
     }
     
